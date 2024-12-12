@@ -32,5 +32,10 @@ class emp_master extends Model
         'emp_name',
         'emp_dept',
         'emp_role',
+        'e_isActive',
+    ];
+
+    protected $casts=[
+        'e_isActive' =>' boolean',
     ];
 }

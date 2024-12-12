@@ -30,5 +30,9 @@ class team_master extends Model
         'm_id',
         't_name',
         't_dept',
+        't_isActive',
+    ];
+    protected $casts=[
+        't_isActive' =>'boolean',
     ];
 }

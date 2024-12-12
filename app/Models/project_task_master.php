@@ -27,12 +27,20 @@ class project_task_master extends Model
      */
     protected $fillable = [
         'p_duration',
+        'p_duration',
         'p_task_duration',
         'p_task_name',
         'p_task_description',
-        'p_isstart',
-        'p_iscompleted',
+        'p_isStart',
+        'p_isCompleted',
+        'p_isActive',
+        'p_status',
         'p_remarks',
         'ptc_emp_id',
+    ];
+    protected $casts=[
+        'p_isActive' =>'boolean',
+        'p_isStart'=>'date',
+        'p_isCompleted'=>'date',
     ];
 }
