@@ -15,7 +15,12 @@ class manager_master extends Model
        ' MLM_id',
        ' CEO_id',
         'M_Name',
-        'M_Department'
+        'M_Department',
+        'M_isActive'
     ];
     protected $primaryKey = 'M_id';
+
+    protected $casts = [
+        'M_isActive'=> 'boolean', 
+    ];
 }
