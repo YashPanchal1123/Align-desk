@@ -30,9 +30,21 @@ class team_master extends Model
         'm_id',
         't_name',
         't_dept',
-        't_isActive',
+        't_isactive',
     ];
     protected $casts=[
-        't_isActive' =>'boolean',
+        't_isactive' =>'boolean',
     ];
+
+    public function toArray()
+    {
+        return [
+            'team_id' => $this->t_id,
+            'ceo_id' => $this->ceo_id,
+            'm_id' => $this->m_id,
+            'team_name' => $this->t_name,
+            'team_department' => $this->t_dept,
+            'team_isactive' => $this->t_isactive,
+        ];
+    }
 }

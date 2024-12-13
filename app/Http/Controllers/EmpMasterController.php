@@ -120,4 +120,18 @@ class EmpMasterController extends Controller
         ], 200);
     }
 
+    //delete Employee
+    public function deleteEmp($id)
+    {
+        $emp = EmpMaster::find($id);
+
+        if (!$emp) {
+            return response()->json(['message' => 'Employee not found'], 404);
+        }
+
+        $emp->delete();
+
+        return response()->json(['message' => 'Employee deleted successfully']);
+    }
+
 }
