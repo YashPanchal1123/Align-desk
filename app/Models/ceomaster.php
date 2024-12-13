@@ -14,7 +14,7 @@ class ceomaster extends Model
     protected $primaryKey = 'CEO_id';
 
     protected $fillable = [
-        'CEOL_id',
+        'CEOL_Id',
         'CEO_Name',
         'CEO_isActive'
     ];
@@ -27,7 +27,7 @@ class ceomaster extends Model
     {           
         return [
             'id' => $this->CEO_id, 
-            'ceo_login_id' => $this->CEOL_id,
+            'ceo_login_id' => $this->CEOL_Id,
             'ceo_name' => $this->CEO_Name,
             'ceo_is_active' => $this->CEO_isActive,
         ];

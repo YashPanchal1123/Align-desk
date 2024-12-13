@@ -15,5 +15,9 @@ class ceo_login_master extends Model
         'CEO_Email',
         'CEO_Password'
     ];
-    protected $primaryKey = 'CEOL_id';
+    protected $primaryKey = 'CEOL_Id';
+
+//here we also define toArray() function used but we use another short method for ceo_login_master & manager_login_master
+//we do not use toArray() function we added this feild directly in controller
+
 }

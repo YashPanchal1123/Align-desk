@@ -95,5 +95,18 @@ class CEOMasterController extends Controller
             'user' => $ceo,
         ], 200);
     }
+    //Delete CEO API
+    public function deleteCEO($id)
+    {
+        $ceo = CEOMaster::find($id);
+
+        if (!$ceo) {
+            return response()->json(['message' => 'CEO not found'], 404);
+        }
+
+        $ceo->delete();
+
+        return response()->json(['message' => 'CEO deleted successfully']);
+    }
 
 }
